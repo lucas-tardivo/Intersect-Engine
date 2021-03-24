@@ -3253,7 +3253,9 @@ namespace Intersect.Server.Entities
                 }
 
                 bag = new Bag(slotCount);
+                bag.Save();
                 bagItem.Bag = bag;
+                bagItem.BagId = bag.Id;
             }
 
             //Send the bag to the player (this will make it appear on screen)
